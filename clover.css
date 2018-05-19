@@ -1,0 +1,120 @@
+.reveal section.cssis😮 {
+  margin: auto;
+  text-align: left;
+  border: 0.125em solid white;
+  width: 15ch;
+  padding: 1em;
+  white-space: nowrap;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.reveal :not(pre) > code {
+  background-color: var(--accent);
+  color: var(--bg);
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.reveal .hljs {
+  /*max-height: 10em;*/
+}
+
+.reveal .css-snippet .css {
+  /* height: 400px; */
+}
+
+.reveal .awesome span {
+  color: var(--accent);
+}
+
+/* colors */
+:root {
+  --purple: #563a66;
+  --blue: #60cde0;
+  --bg: var(--purple);
+  --fg: white;
+  --fg--inverse: #333;
+  --accent: var(--blue);
+}
+
+body {
+  background: var(--bg);
+  background-color: var(--bg);
+}
+
+/* clover font for headers, system for others */
+@font-face {
+  font-family: clover;
+  src: url(//www.cloverhealth.com/assets/bundles/fspimlico-black.a7f6de5eebf70b196f7bc55e67bec444.eot);
+  src: url(//www.cloverhealth.com/assets/bundles/fspimlico-black.a7f6de5eebf70b196f7bc55e67bec444.eot?#iefix)
+      format('embedded-opentype'),
+    url(//www.cloverhealth.com/assets/bundles/fspimlico-black.611c29aeca3c30a286a7dfde568e39e8.woff)
+      format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Define the "system" font family */
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local('.SFNSText-Light'), local('.HelveticaNeueDeskInterface-Light'),
+    local('.LucidaGrandeUI'), local('Ubuntu Light'), local('Segoe UI Light'),
+    local('Roboto-Light'), local('DroidSans'), local('Tahoma');
+}
+
+.reveal {
+  font-family: system;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: clover, 'Source Sans Pro', Helvetica, sans-serif;
+  text-transform: none;
+  color: var(--fg);
+}
+
+/* adjust header font sizes */
+.reveal h1 {
+  font-size: 2.5em;
+  color: var(--fg);
+}
+
+.reveal h2 {
+  font-size: 2.5em;
+}
+
+.reveal h3 {
+  font-size: 1.6em;
+}
+
+.reveal h4 {
+  font-size: 1.3em;
+}
+
+/* override spacing and font */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6,
+.reveal p {
+  margin: 0;
+}
+
+.reveal * + h1,
+.reveal * + h2,
+.reveal * + h3,
+.reveal * + h4,
+.reveal * + h5,
+.reveal * + h6,
+.reveal * + p {
+  margin-top: 20px;
+}

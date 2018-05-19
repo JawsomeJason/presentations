@@ -1,0 +1,16 @@
+{
+  "name": "presentations",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "reveal-css-snippet": "https://github.com/thejase/reveal-css-snippet.git",
+    "reveal-md": "^2.0.5",
+    "style-scoped": "^0.1.0",
+    "trial-js": "^0.1.1"
+  },
+  "scripts": {
+    "start": "reveal-md --template reveal.html --css clover.css",
+    "css-variables": "yarn start -- css-variables.md"
+  }
+}
