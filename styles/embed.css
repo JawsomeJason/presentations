@@ -1,0 +1,29 @@
+/* ensure each slide has a width and height */
+.stack {
+  display: grid !important;
+  width: 100%;
+  height: 100%;
+}
+
+/* allow embedded content to take up as much room as it can */
+.embedded {
+  display: flex !important;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 0 !important;
+  grid-auto-rows: auto;
+  align-items: stretch;
+  justify-content: center;
+}
+.embedded > picture,
+.embedded > source,
+.embedded > img,
+.embedded > embed,
+.embedded > object,
+.embedded > video,
+.embedded > svg,
+.embedded > iframe,
+.embedded > .embed {
+  flex: 1 1 auto;
+}

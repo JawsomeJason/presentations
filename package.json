@@ -8,7 +8,7 @@
     "trial-js": "^0.1.1"
   },
   "scripts": {
-    "start": "reveal-md --css clover.css",
+    "start": "reveal-md --css styles/clover.css,styles/embed.css",
     "css-variables": "yarn start -- css-variables.md"
   }
 }

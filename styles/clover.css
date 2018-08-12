@@ -1,40 +1,13 @@
-.reveal section.cssis😮 {
-  margin: auto;
-  text-align: left;
-  border: 0.125em solid white;
-  width: 15ch;
-  padding: 1em;
-  white-space: nowrap;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.reveal :not(pre) > code {
-  background-color: var(--accent);
-  color: var(--bg);
-  padding-left: 0.25em;
-  padding-right: 0.25em;
-}
-
-.reveal .hljs {
-  /*max-height: 10em;*/
-}
-
-.reveal .css-snippet .css {
-  /* height: 400px; */
-}
-
-.reveal .awesome span {
-  color: var(--accent);
-}
-
 /* colors */
 :root {
   --purple: #563a66;
   --blue: #60cde0;
+  --white: white;
+  --black: #333;
+
   --bg: var(--purple);
-  --fg: white;
-  --fg--inverse: #333;
+  --fg: var(--white);
+  --fg--inverse: var(--black);
   --accent: var(--blue);
 }
 
@@ -118,3 +91,27 @@ body {
 .reveal * + p {
   margin-top: 20px;
 }
+
+/* CSS Variables are Awesome design */
+.reveal section.cssis😮 {
+  margin: auto;
+  text-align: left;
+  border: 0.125em solid white;
+  width: 15ch;
+  padding: 1em;
+  white-space: nowrap;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.reveal :not(pre) > code {
+  background-color: var(--accent);
+  color: var(--bg);
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.reveal .awesome span {
+  color: var(--accent);
+}
+
