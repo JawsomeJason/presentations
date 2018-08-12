@@ -1,5 +1,5 @@
 ---
-title: Foobar
+title: CSS Variables are Awesome!
 theme: black
 revealOptions:
     transition: 'slide'
