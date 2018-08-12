@@ -271,7 +271,11 @@ commander@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-1.0.0.tgz#5e6a88e7070ff5908836ead19169548c30f90bcd"
 
-commander@2.15.1, commander@^2.9.0:
+commander@2.17.1:
+  version "2.17.1"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.17.1.tgz#bd77ab7de6de94205ceacc72f1716d29f20a77bf"
+
+commander@^2.9.0:
   version "2.15.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.15.1.tgz#df46e867d0fc2aec66a34662b406a9ccafff5b0f"
 
@@ -676,9 +680,9 @@ glob@7.1.2, glob@^7.0.5:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-got@8.3.1:
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/got/-/got-8.3.1.tgz#093324403d4d955f5a16a7a8d39955d055ae10ed"
+got@8.3.2:
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/got/-/got-8.3.2.tgz#1d23f64390e97f776cac52e5b936e5f514d2e937"
   dependencies:
     "@sindresorhus/is" "^0.7.0"
     cacheable-request "^2.1.1"
@@ -797,9 +801,9 @@ ignore-walk@^3.0.1:
   dependencies:
     minimatch "^3.0.4"
 
-image-data-uri@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/image-data-uri/-/image-data-uri-1.1.0.tgz#c87017e9f1b34029d2ffe756212ccf4a67f804c6"
+image-data-uri@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/image-data-uri/-/image-data-uri-1.1.1.tgz#ff0ec63c9d9499b49fec3b9e0ae2d34b266ec903"
   dependencies:
     fs-extra "^0.26.7"
     magicli "0.0.8"
@@ -957,6 +961,10 @@ is-retry-allowed@^1.1.0:
 is-typedarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
+
+is-wsl@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/is-wsl/-/is-wsl-1.1.0.tgz#1f16e4aa22b04d1336b66188a66af3c600c3a66d"
 
 isarray@1.0.0, isarray@~1.0.0:
   version "1.0.0"
@@ -1201,9 +1209,9 @@ ms@2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
 
-mustache@2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/mustache/-/mustache-2.3.0.tgz#4028f7778b17708a489930a6e52ac3bca0da41d0"
+mustache@2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/mustache/-/mustache-2.3.1.tgz#ef5db3c0d11f1640e9baa47f4e65ba0c3fcd82b9"
 
 nan@^2.9.2:
   version "2.10.0"
@@ -1318,9 +1326,11 @@ once@^1.3.0:
   dependencies:
     wrappy "1"
 
-open@0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/open/-/open-0.0.5.tgz#42c3e18ec95466b6bf0dc42f3a2945c3f0cad8fc"
+opn@5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/opn/-/opn-5.3.0.tgz#64871565c863875f052cfdf53d3e3cb5adb53b1c"
+  dependencies:
+    is-wsl "^1.1.0"
 
 options@>=0.0.5:
   version "0.0.6"
@@ -1585,35 +1595,31 @@ responselike@1.0.2:
   dependencies:
     lowercase-keys "^1.0.0"
 
-"reveal-css-snippet@https://github.com/thejase/reveal-css-snippet.git":
-  version "0.2.0"
-  resolved "https://github.com/thejase/reveal-css-snippet.git#a5688dfb7a767959e5a8c576185d480f65aef19f"
-
-reveal-md@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/reveal-md/-/reveal-md-2.0.5.tgz#feaeefefad88c4b48d251717dba0c7a993edf403"
+reveal-md@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/reveal-md/-/reveal-md-2.1.0.tgz#230fc4625951e635afbb8ed0a5ac00dfa09c9e3f"
   dependencies:
     bluebird "3.5.1"
-    commander "2.15.1"
+    commander "2.17.1"
     express "4.16.3"
     fs-extra "5.0.0"
     glob "7.1.2"
-    got "8.3.1"
+    got "8.3.2"
     highlight.js "9.12.0"
-    image-data-uri "1.1.0"
+    image-data-uri "1.1.1"
     livereload "0.7.0"
     lodash "4.17.10"
-    mustache "2.3.0"
-    open "0.0.5"
-    reveal.js "3.6.0"
+    mustache "2.3.1"
+    opn "5.3.0"
+    reveal.js "3.7.0"
     serve-favicon "2.5.0"
     yaml-front-matter "4.0.0"
   optionalDependencies:
     puppeteer "1.3.0"
 
-reveal.js@3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/reveal.js/-/reveal.js-3.6.0.tgz#ce0e64f30cbebd6e5ce885c2f384085c5e5821e8"
+reveal.js@3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/reveal.js/-/reveal.js-3.7.0.tgz#7afaf72fd963000381289d58f3aa54c0c46b150c"
 
 rimraf@^2.2.8, rimraf@^2.6.1:
   version "2.6.2"
@@ -1784,10 +1790,6 @@ strip-ansi@^4.0.0:
 strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
-
-style-scoped@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/style-scoped/-/style-scoped-0.1.0.tgz#d4519787a37fc8dd630d86cf9c894ef42b52727e"
 
 table-layout@^0.4.2:
   version "0.4.3"
