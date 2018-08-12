@@ -2,9 +2,13 @@
 title: CSS Variables are Awesome!
 theme: black
 revealOptions:
+
     transition: 'slide'
     history: true
-
+    progress: false
+    width: '100%'
+    height: '100%'
+    margin: 0.1
 ---
 
 <!-- .slide: class="cssis😮" id="css-variables-are-awesome" -->
@@ -71,30 +75,21 @@ revealOptions:
 ```
 
 ---
+<!-- .slide: class="embedded" -->
 
 ## Breadcrumbs 🍞
 
-<div data-content-src="example-html-trial"></div>
-
-<style scoped data-content-src="layout-styles"></style>
-<style scoped data-content-src="skew"></style>
-<style scoped data-content-src="link-colors"></style>
-<style scoped data-content-src="hover"></style>
-<style scoped data-content-src="glow"></style>
+<iframe scrolling="no" data-src="//jsbin.com/pagigop/110/embed?output" frameborder="no" allowtransparency="true" allowfullscreen="true">
+</iframe>
 
 ----
+<!-- .slide: class="embedded" -->
 
 ### Design Requirements
 
-<div data-content-src="example-html-trial"></div>
+<iframe scrolling="no" data-src="//jsbin.com/pagigop/110/embed?output" frameborder="no" allowtransparency="true" allowfullscreen="true">
+</iframe>
 
-<style scoped data-content-src="layout-styles"></style>
-<style scoped data-content-src="skew"></style>
-<style scoped data-content-src="link-colors"></style>
-<style scoped data-content-src="hover"></style>
-<style scoped data-content-src="glow"></style>
-
-<br />
 * Separated by analogous purple slashes
 * Can contain 1-N levels
 * Hovering container expands slashes (staggered)
@@ -105,121 +100,42 @@ revealOptions:
 ### Let’s Do It Live 🎤
 
 ----
+<!-- .slide: class="embedded" -->
 
 #### Always design HTML first 🏗
 
-```html
-<ul class="crumbs">
-  <li class="crumb">
-    <a class="link" href="#">Home</a>
-  </li>
-  <li class="crumb"><a class="link" href="#">Artists</a></li>
-  <li class="crumb"><a class="link" href="#">Cher</a></li>
-</ul>
-```
+<iframe scrolling="no" data-src="//jsbin.com/pagigop/40/embed?html,output" frameborder="no" allowtransparency="true" allowfullscreen="true">
+</iframe>
 
 ---
 
-### Then Apply CSS 🎨
+### Then Apply Presentation 🎨
 
 ----
+<!-- .slide: class="embedded" -->
 
 #### Layout
 
-<div id="example-html">
-  <div class="example">
-    <ul class="crumbs">
-      <li class="crumb"><a class="link" href="#">Home</a></li>
-      <li class="crumb"><a class="link" href="#">Artists</a></li>
-      <li class="crumb"><a class="link" href="#">Cher</a></li>
-    </ul>
-  </div>
-</div>
-
-<style id="base">
-.example { overflow: hidden; border: 2px solid white !important; }
-.crumbs, .crumbs > * {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.crumbs {
-  font-family: sans-serif;
-}
-</style>
-
-<style id="layout-styles" scoped contenteditable>
-/* basic layout */
-.crumbs {
-  display: inline-block;
-  display: flex;
-  background: black;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-a.link {
-  display: block;
-  padding: 1em;
-  color: white;
-  cursor: pointer;
-}
-</style>
+<iframe scrolling="no" data-src="//jsbin.com/pagigop/46/embed?css,output" frameborder="no" allowtransparency="true" allowfullscreen="true">
+</iframe>
 
 ----
+<!-- .slide: class="embedded" -->
 
-#### Add a Skewed Separator
+#### Skewed and Separated
 
-<div data-content-src="example-html"></div>
-
-<style scoped data-content-src="layout-styles"></style>
-
-<style id="skew" scoped contenteditable>
-.crumbs {
-  overflow: hidden;
-}
-.crumb {
-  transform: skew(-20deg);
-  border-right: 10px solid white;
-}
-
-.crumb:first-child {
-  margin-left: -.6em;
-}
-
-.crumb:first-child .link {
-  padding-left: 1.6em;
-}
-
-.link {
-  transform: skew(20deg);
-}
-
-</style>
+<iframe scrolling="no" data-src="//jsbin.com/pagigop/48/embed?css,output" frameborder="no" allowtransparency="true" allowfullscreen="true">
+</iframe>
 
 ----
+<!-- .slide: class="embedded" -->
 
 #### Add analogous colors
 
-<div data-content-src="example-html"></div>
+<!-- <div data-content-src="example-html"></div> -->
 
-<style scoped data-content-src="layout-styles"></style>
-<style scoped data-content-src="skew"></style>
-
-<style id="link-colors-before" scoped contenteditable>
-/* lots of repetition and having to know how many children */
-.crumb:nth-child(1) {
-  background-image: linear-gradient(to top, hsl(278, 27%, 31%), hsl(278, 27%, 31%));
-}
-.crumb:nth-child(2) {
-  background-image: linear-gradient(to top, hsl(278, 27%, 51%), hsl(278, 27%, 51%));
-}
-.crumb:nth-child(3) {
-  background-image: linear-gradient(to top, hsl(278, 27%, 71%), hsl(278, 27%, 71%));
-}
-</style>
+<iframe scrolling="no" data-src="//jsbin.com/pagigop/87/embed?css,output" frameborder="no" allowtransparency="true" allowfullscreen="true">
+</iframe>
 
 ----
 
@@ -228,283 +144,110 @@ a.link {
 Maybe we could make that a little better with some CSS Custom Properties…
 
 ----
+<!-- .slide: class="embedded" -->
 
 #### Add some props on the HTML
 
-```html
-<ul class="crumbs" style="--count: 3">
-  <li class="crumb" style="--index: 0;">
-    <a class="link" href="#">Home</a>
-  </li>
-  <li class="crumb" style="--index: 1;">
-    <a class="link" href="#">Artists</a>
-  </li>
-  <li class="crumb" style="--index: 2;">
-    <a class="link" href="#">Cher</a>
-  </li>
-</ul>
-```
+<iframe scrolling="no" data-src="//jsbin.com/pagigop/75/embed?html" frameborder="no" allowtransparency="true" allowfullscreen="true">
+</iframe>
+
 
 Any React component could easily include these in the `render()` method.
 
 ----
+<!-- .slide: class="embedded" -->
 
 #### Let’s use the props instead
 
-<div id="example-html-props">
-  <div class="example">
-    <ul class="crumbs" style="--count: 3">
-      <li class="crumb" style="--index: 0;"><a class="link" href="#">Home</a></li>
-      <li class="crumb" style="--index: 1;"><a class="link" href="#">Artists</a></li>
-      <li class="crumb" style="--index: 2;"><a class="link" href="#">Cher</a></li>
-    </ul>
-  </div>
-</div>
-
-<style scoped data-content-src="layout-styles"></style>
-<style scoped data-content-src="skew"></style>
-
-<style scoped contenteditable data-content-src="link-colors-before"></style>
+<iframe scrolling="no" data-src="//jsbin.com/pagigop/85/embed?css,output" frameborder="no" allowtransparency="true" allowfullscreen="true">
+</iframe>
 
 Notes:
 ```css
-.crumb {
-  --variance: calc(40% / var(--count) * var(--index));
-  --bg-color: hsl(278, 27%, calc(31% + var(--variance)));
-  background-image: linear-gradient(to top, var(--bg-color), var(--bg-color));
+.link {
+  // max - min / total * current
+  --alpha: ~"calc(1 - .4 / var(--count) * var(--index))";
+  background-color: ~"hsla(@{hsl}, var(--alpha)";
 }
 ```
 
 ----
+<!-- .slide: class="embedded" -->
 
 #### Any count will now work
 
-```html
-<ul class="crumbs" style="--count: 4">
-  <li class="crumb" style="--index: 0;"><a class="link" href="#">Home</a></li>
-  <li class="crumb" style="--index: 1;"><a class="link" href="#">Artists</a></li>
-  <li class="crumb" style="--index: 2;"><a class="link" href="#">Cher</a></li>
-  <li class="crumb" style="--index: 3;"><a class="link" href="#">Albums</a></li>
-</ul>
-```
-
-<div id="example-html-4">
-  <div class="example">
-    <ul class="crumbs" style="--count: 4">
-      <li class="crumb" style="--index: 0;"><a class="link" href="#">Home</a></li>
-      <li class="crumb" style="--index: 1;"><a class="link" href="#">Artists</a></li>
-      <li class="crumb" style="--index: 2;"><a class="link" href="#">Cher</a></li>
-      <li class="crumb" style="--index: 3;"><a class="link" href="#">Albums</a></li>
-    </ul>
-  </div>
-</div>
-
-<style scoped data-content-src="layout-styles"></style>
-<style scoped data-content-src="skew"></style>
-
-<style scoped id="link-colors">
-.crumb {
-  --variance: calc(40% / var(--count) * var(--index));
-  --bg-color: hsl(278, 27%, calc(31% + var(--variance)));
-  background-image: linear-gradient(to top, var(--bg-color), var(--bg-color));
-}
-</style>
+<iframe scrolling="no" data-src="//jsbin.com/pagigop/90/embed?html,output" frameborder="no" allowtransparency="true" allowfullscreen="true">
+</iframe>
 
 ----
+<!-- .slide: class="embedded" -->
 
 #### Add hover transitions
 
-<div data-content-src="example-html-4"></div>
-
-<style scoped data-content-src="layout-styles"></style>
-<style scoped data-content-src="skew"></style>
-<style scoped data-content-src="link-colors"></style>
-
-<style scoped contenteditable id="hover-before">
-/* let’s add hover states */
-.crumb {
-
-}
-</style>
+<iframe scrolling="no" data-src="//jsbin.com/pagigop/108/embed?css,output" frameborder="no" allowtransparency="true" allowfullscreen="true">
+</iframe>
 
 Notes:
 
 ```css
-.crumb {
-  border-right: none;
-  background-size: 10px 100%;
-  background-repeat: no-repeat;
-  background-position: right;
-  transition: .2s background-size ease-out calc(.1s * var(--index));
-  will-change: background-size;
-}
+.crumbs {
+    --hover: 0;
+    --stagger: .1s;
 
-a.link {
-  padding-right: calc(1em + 10px);
-}
+    &:hover {
+      --hover: 1;
+    }
+  }
+  .link {
+    // kill old backgrounds
+    background-color: transparent;
 
-.crumbs:hover .crumb {
-  background-size: 100% 100%;
+    // fill the background using a transitioned linear gradient
+    background: linear-gradient(@hsla, @hsla)
+                left top / ~"calc(100% * var(--hover))" 100%
+                no-repeat;
+
+    // add a staggered delay to each item
+    @delay: ~"calc(var(--index) * var(--stagger))";
+    transition: background .2s ease-out @delay;
+  }
 }
 ```
 
 ---
+<!-- .slide: class="embedded" -->
 
 ### Glow State 💡
 
-<style scoped id="hover">
-.crumb {
-  border-right: none;
-  background-size: 10px 100%;
-  background-repeat: no-repeat;
-  background-position: right;
-  transition: .2s background-size ease-out calc(.1s * var(--index));
-  will-change: background-size;
-}
-
-a.link {
-  padding-right: calc(1em + 10px);
-}
-
-.crumbs:hover .crumb {
-  background-size: 100% 100%;
-}
-</style>
+<iframe scrolling="no" data-src="//jsbin.com/pagigop/110/embed?output" frameborder="no" allowtransparency="true" allowfullscreen="true">
+</iframe>
 
 ----
-
-#### Add a JS hook for Trial
-
-
-```html
-  <ul class="crumbs" style="--count: 4">
-    <li class="crumb" data-track-pointer style="--index: 0;"> … </li>
-    …
-  </ul>
-```
-
-----
+<!-- .slide: class="embedded" -->
 
 #### Add `--pointer-x, --...y` props on `mousemove`
 
+<iframe scrolling="no" data-src="//jsbin.com/pagigop/110/embed?js" frameborder="no" allowtransparency="true" allowfullscreen="true">
+</iframe>
+
+
 Used via [Trial.js on Github](https://github.com/MarkoCen/trial-js).
 
-```js
-Trial('[data-track-pointer]').within(
-  { distance: 1000, cord: 'center' },
-  (distance, ele, e) => {
-    const node = Trial.getEleCord(ele, 'topLeft');
-    const pointer = Trial.getPointerPos(e);
-    ele.style.setProperty('--pointer-x', pointer.left - node.left)
-    ele.style.setProperty('--pointer-y', pointer.top - node.top)
-  },
-);
-```
-
 ----
+<!-- .slide: class="embedded" -->
 
 #### Add the Glow
 
-<div id="example-html-trial">
-  <div class="example">
-    <ul class="crumbs" style="--count: 4">
-      <li class="crumb" data-track-pointer style="--index: 0;"><a class="link" href="#">Home</a></li>
-      <li class="crumb" data-track-pointer style="--index: 1;"><a class="link" href="#">Artists</a></li>
-      <li class="crumb" data-track-pointer style="--index: 2;"><a class="link" href="#">Cher</a></li>
-      <li class="crumb" data-track-pointer style="--index: 3;"><a class="link" href="#">Albums</a></li>
-    </ul>
-  </div>
-</div>
+<iframe scrolling="no" data-src="//jsbin.com/pagigop/110/embed?css,output" frameborder="no" allowtransparency="true" allowfullscreen="true">
+</iframe>
 
-<style scoped data-content-src="layout-styles"></style>
-<style scoped data-content-src="skew"></style>
-<style scoped data-content-src="link-colors"></style>
-<style scoped data-content-src="hover"></style>
-<style scoped contenteditable id="glow-before">
-.crumb {
-
-}
-
-.link {
-
-}
-</style>
-
-Notes:
-```css
-/* add a layer between crumb and link */
-.crumb {
-  position: relative;
-}
-
-.crumb:before {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.link {
-  position: relative;
-}
-
-/* position the glow */
-.crumb:before {
-  /* just for readability.  Should be LESS vars */
-  --shape: ellipse 100% 100% at var(--mouse-position);
-  --center-color: rgba(255, 255, 255, 0.25);
-  --edge-color: rgba(255, 255, 255, 0);
-
-  /* JS exposes --pointer-x and --pointer-y */
-  --mouse-position: calc(var(--pointer-x) * 1px) calc(var(--pointer-y) * 1px);
-
-  background: radial-gradient(var(--shape), var(--center-color), var(--edge-color)) no-repeat;
-}
-```
 ---
+<!-- .slide: class="embedded" -->
 
 ## Final Product
 
-<div data-content-src="example-html-trial"></div>
-
-<style scoped data-content-src="layout-styles"></style>
-<style scoped data-content-src="skew"></style>
-<style scoped data-content-src="link-colors"></style>
-<style scoped data-content-src="hover"></style>
-<style scoped id="glow">
-/* add a layer between crumb and link */
-.crumb {
-  position: relative;
-}
-
-.crumb:before {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.link {
-  position: relative;
-}
-
-/* position the glow */
-.crumb:before {
-  /* just for readability.  Should be LESS vars */
-  --shape: ellipse 100% 100% at var(--mouse-position);
-  --center-color: rgba(255, 255, 255, 0.25);
-  --edge-color: rgba(255, 255, 255, 0);
-
-  /* JS exposes --pointer-x and --pointer-y */
-  --mouse-position: calc(var(--pointer-x) * 1px) calc(var(--pointer-y) * 1px);
-
-  background: radial-gradient(var(--shape), var(--center-color), var(--edge-color)) no-repeat;
-}
-</style>
+<iframe scrolling="no" data-src="//jsbin.com/pagigop/110/embed?output" frameborder="no" allowtransparency="true" allowfullscreen="true">
+</iframe>
 
 ---
 
